@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>過疎スタ-C</title>
+    <meta name="過疎スタ-C" content="過疎スタで利用するチャット">
+    <link rel="stylesheet" href="assets/CSS/sanitize.css">
+    <link rel="stylesheet" href="assets/CSS/style.css">
+    <link rel="icon" href="assets/imags/favicon.png">
+    <script src="assets/JS/index.js"></script>
+    <script type="module">
+        // Firebase SDKの読み込み
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-storage.js";
+
+        // Firebaseの設定
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_PROJECT_ID.appspot.com",
+            messagingSenderId: "YOUR_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+
+        // Firebaseの初期化
+        const app = initializeApp(firebaseConfig);
+        const storage = getStorage(app);
+    </script>
+</head>
+<body>
+    <ul class="navigate">
+        <li class="img-icon">
+            <span><img src="assets/imags/logo.jpg" alt="jpg"></span>
+        </li>
+        <li class="navigate-studio btn-navigate">
+            <a class="navigate-studio" target="_blank" href="https://scratch.mit.edu/studios/35977376/comments/">
+                <span>過疎スタ</span>
+            </a>
+        </li>
+        <li class="navigate-wiki btn-navigate">
+            <a class="navigate-wiki" target="_blank" href="https://w.atwiki.jp/kasostudio/">
+                <span>過疎スタ@wiki</span>
+            </a>
+        </li>
+    </ul>
+
+    <br><br><br><br><br><br><br><br>
+
+    <ul class="send">
+        <div>
+            <input id="send_name" type="text" maxlength="20" placeholder="名前を入力" autocorrect="off"><br>
+            <textarea id="send_text_content" name="send_text_content" autocorrect="off" rows="5" placeholder="コメントを入力"></textarea>
+            <button id="send_submit_btn" type="submit">送信</button>
+            <br>
+            <label for="fileInput">送りたい画像を選択</label>
+            <input type="file" id="fileInput">
+            <button id="uploadBtn">アップロード</button>
+
+        </div>
+    </ul>
+</body>
+</html>

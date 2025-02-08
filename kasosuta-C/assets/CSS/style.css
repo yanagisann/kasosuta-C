@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+.html {
+    font-family: sans-serif;
+}
+
+.navigate {
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    background-color: #3672d9;
+    display: flex;
+}
+
+.img-icon {
+    list-style: none;
+}
+
+.btn-navigate {
+    list-style: none;
+    background-color: #3672d9;
+    padding: 5px 10px 10px 5px;
+}
+
+.btn-navigate span {
+    color: white;
+    font-size: 25px;
+}
+
+.btn-navigate a {
+    text-decoration: none;
+}
+
+.btn-navigate:hover {
+    background-color: #3365bd;
+}
+
+.send > div {
+    position: absolute;
+    bottom: 10px;
+    margin: 0;
+}
+
+#send_text_content {
+    resize: horizontal;
+}
+
+/* ファイル選択とアップロードボタンの配置調整 */
+label[for="fileInput"],
+#fileInput,
+#uploadBtn {
+    display: inline-block;
+    margin-right: 10px; /* 余白を適宜調整 */
+    vertical-align: middle; /* 高さを揃える */
+}
